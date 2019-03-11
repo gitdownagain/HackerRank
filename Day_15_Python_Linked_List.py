@@ -18,13 +18,14 @@ class Solution:
             self.insert(head.next, data)
         return head
 
-# The function gets called with the whole linked list. 
-#     If the list is empty,
+# Each time you add to mylist, you're passing the whole list.
+#     IF the list is empty (head == None),
 #         insert the element as the head.
-#     Otherwise if there is no element after the head,
+#     ELIF there is no element after the head (head.next == None),
 #         put the data after the head.
-#     Otherwise,
-#         call the function with all of the elements except for the current head
+#     ELSE,
+#         recursively call the function with all of the elements except for the current head
+# You traverse the list until you get to the point here head.next == None and you can add data.
 
 mylist= Solution()
 T=int(input())
